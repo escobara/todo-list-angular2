@@ -1,3 +1,15 @@
 <h1>
   {{title}}
 </h1>
+<div class="row">
+	<form class="navbar-form navbar-left" role="search">
+	  <div class="form-group">
+	    <input class="form-control" name='item' #itemname>
+	  </div>
+	  <button (click)="addItem(itemname)" class="btn btn-default">Submit</button>
+	</form>
+</div>
+
+<div class="row">
+	<app-item-list></app-item-list>
+</div>
