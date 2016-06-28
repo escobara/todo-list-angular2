@@ -5,5 +5,15 @@ export class Item {
 		this.name = name;
 		this.completed = completed || false;
 	}
+
+	markCompleted() {
+		this.completed = true;
+		console.log(this.completed);
+	}
+
+	markIncompleted() {
+		this.completed = false;
+		console.log(this.completed);
+	}
 }
 

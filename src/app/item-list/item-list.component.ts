@@ -10,11 +10,26 @@ import { Item } from '../models/item';
 
 export class ItemListComponent implements OnInit {
   items = [
-    new Item('Windstorm', true),
-    new Item('Bombasto', false),
-    new Item('Magneta', false ),
-    new Item('Tornado', true)
+    new Item('Buy Groceries', true),
+    new Item('Call Comcast', false),
+    new Item('Call Mother', false ),
+    new Item('Find Sitter', true)
   ];
+  completedItems: Item[] = [];
+
+  markCompleted(item) {
+  	item.markCompleted();
+  	// this.items.pop(item);
+  	console.log(this.items);
+  	this.completedItems.push(item);
+  	console.log(this.completedItems);
+  }
+
+  // markIncompleted() {
+  // 	item.markIncompleted();
+  // 	this.completedItems.push(item);
+  // }
+
 
   ngOnInit() {
 
